@@ -1,0 +1,41 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="start.com.br.startapp.atividade.Perfil">
+
+
+
+    <item
+
+        android:id="@+id/notificaoes"
+        android:checkable="false"
+        android:enabled="false"
+        android:orderInCategory="100"
+        android:title="@string/configuracao_notificacao" />
+
+    <item
+        android:id="@+id/integracao_outlook"
+        android:orderInCategory="100"
+        android:title="@string/configuracao_integracao_outlook"
+        />
+
+    <item
+        android:id="@+id/distancia"
+        android:orderInCategory="100"
+        android:title="@string/configuracao_distancia"
+        />
+
+    <item
+        android:id="@+id/localizacao"
+        android:checkable="false"
+        android:orderInCategory="100"
+        android:title="@string/configuracao_localizacao_disponivel" />
+
+    <item
+        android:id="@+id/disponivel"
+        android:orderInCategory="100"
+        android:title="@string/configuracao_disponivel"
+        />
+
+
+</menu>

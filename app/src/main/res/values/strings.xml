@@ -1,0 +1,52 @@
+<resources>
+
+    <!--APP-->
+    <string name="app_name">startapp</string>
+    <string name="title_home">Bem vindo!</string>
+    <string name="configuracao_ativa"> Acessando configurações</string>
+    <string name="configuracao_intativa"> Fechando configurações </string>
+
+
+    <!--Tela Acesso -->
+
+    <string name="acesso_titulo">Primeiro acesso</string>
+    <string name="acesso_sub_titulo">Escolha uma forma de acessar o aplicativo</string>
+
+
+    <string name="acesso_toolbar_bottom_atrasos">Atrasos</string>
+    <string name="acesso_toolbar_bottom_recentes">Recentes</string>
+    <string name="acesso_toolbar_bottom_favoritos">Favoritos</string>
+
+    <!--Tela Configuração -->
+    <string name="configuracao_integracao_outlook">Integração outlook</string>
+    <string name="configuracao_notificacao">Notificações</string>
+    <string name="configuracao_localizacao_disponivel">Localização disponível</string>
+    <string name="configuracao_distancia">Distancia relativa</string>
+    <string name="configuracao_disponivel">Disponível</string>
+
+    <!--Tela Cadastro -->
+
+    <string name="nome_dica">Insira o seu primeiro nome</string>
+    <string name="sobrenome_dica">Insira o seu segundo nome</string>
+    <string name="telefone_dica">Insira o seu número de celular</string>
+    <string name="cadastro_acao_OK">ok</string>
+
+
+    <!-- Integração Facebook-->
+    <string name="facebook_app_id">1895603120657405</string>
+    <string name="fb_login_protocol_scheme">fb1895603120657405</string>
+    <string name="title_activity_app">App</string>
+    <string name="title_activity_perfil">perfil</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_principal">principal</string>
+    <string name="title_activity_teste">Teste</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

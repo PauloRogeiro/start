@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="start.com.br.startapp.atividade.Cadastro"
+    android:weightSum="1">
+        <EditText
+            android:id="@+id/cadastro_nome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nome_dica"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/cadastro_sobrenome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/sobrenome_dica"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/cadastro_telefone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/telefone_dica"
+            android:inputType="phone"  />
+
+<android.support.v7.widget.LinearLayoutCompat android:layout_height="32dp" android:layout_width="match_parent" android:layoutDirection="rtl">
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:id="@+id/cadastro_novo"
+                    android:text="@string/cadastro_acao_OK"/>
+
+
+
+
+</android.support.v7.widget.LinearLayoutCompat>
+
+
+
+</LinearLayout>

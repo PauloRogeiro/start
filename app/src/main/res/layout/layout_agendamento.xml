@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/agendamento_pessoa_foto"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:scaleType="fitCenter"
+        app:srcCompat="@android:drawable/sym_def_app_icon"
+
+
+
+        />
+
+    <TextView
+        android:id="@+id/agendamento_pessoa_nome"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/nav_header_vertical_spacing"
+        android:text="Android Studio"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/agendamento_pessoa_foto"
+        android:textColor="@color/com_facebook_button_background_color_disabled"
+        />
+
+    <TextView
+        android:id="@+id/agendamento_pessoa_data"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/agendamento_pessoa_nome"
+        android:padding="@dimen/nav_header_vertical_spacing"
+        android:text="Sobrenome"
+        android:layout_toRightOf="@id/agendamento_pessoa_foto"
+        android:layout_height="wrap_content"
+        android:textColor="@color/com_facebook_button_background_color_disabled"
+
+        />
+
+    <TextView
+        android:id="@+id/agendamento_pessoa_funcao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="paulo.ros.oliveira@gmail.com"
+        android:padding="@dimen/nav_header_vertical_spacing"
+        android:layout_below="@id/agendamento_pessoa_data"
+        android:layout_toRightOf="@id/agendamento_pessoa_foto"
+        android:textColor="@color/com_facebook_button_background_color_disabled"
+        />
+
+
+</RelativeLayout>
