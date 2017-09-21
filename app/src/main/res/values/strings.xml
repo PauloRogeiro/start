@@ -6,6 +6,15 @@
     <string name="configuracao_ativa"> Acessando configurações</string>
     <string name="configuracao_intativa"> Fechando configurações </string>
 
+    <!-- Tela Principal -->
+    <string-array name="periodo_agendamento">
+        <item>HoJe</item>
+        <item>Amanhã</item>
+        <item>Semana que vem</item>
+        <item>Específico</item>
+    </string-array>
+    <string name="periodo_escolhido"> horários de:</string>
+
 
     <!--Tela Acesso -->
 
@@ -13,16 +22,17 @@
     <string name="acesso_sub_titulo">Escolha uma forma de acessar o aplicativo</string>
 
 
-    <string name="acesso_toolbar_bottom_atrasos">Atrasos</string>
-    <string name="acesso_toolbar_bottom_recentes">Recentes</string>
-    <string name="acesso_toolbar_bottom_favoritos">Favoritos</string>
+
 
     <!--Tela Configuração -->
     <string name="configuracao_integracao_outlook">Integração outlook</string>
     <string name="configuracao_notificacao">Notificações</string>
-    <string name="configuracao_localizacao_disponivel">Localização disponível</string>
-    <string name="configuracao_distancia">Distancia relativa</string>
+    <string name="configuracao_localizacao">Localização</string>
     <string name="configuracao_disponivel">Disponível</string>
+    <string name="configuracao_disponivel_atrasos">Atrasos</string>
+    <string name="configuracao_disponivel_recentes">Recentes</string>
+    <string name="configuracao_disponivel_favoritos">Favoritos</string>
+    <string name="configuracao_sugestoes">Sugestões</string>
 
     <!--Tela Cadastro -->
 

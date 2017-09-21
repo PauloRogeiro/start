@@ -4,27 +4,5 @@
 
 
 
-    <item
-        android:id="@+id/aplicacao_bottom_recentes"
-        android:title="@string/acesso_toolbar_bottom_recentes"
-        android:icon="@drawable/history"
-        app:showAsAction="always"
-        />
 
-
-    <item
-        android:id="@+id/aplicacao_bottom_favoritos"
-        android:title="@string/acesso_toolbar_bottom_favoritos"
-        android:icon="@drawable/heart"
-        app:showAsAction="always"
-        />
-
-
-    <item
-        android:id="@+id/aplicacao_bottom_atrasos"
-        android:icon="@drawable/clock_alert"
-        android:title="@string/acesso_toolbar_bottom_atrasos"
-        app:showAsAction="always" />
-
-    />
 </menu>

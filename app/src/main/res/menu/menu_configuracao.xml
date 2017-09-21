@@ -1,40 +1,57 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="start.com.br.startapp.atividade.Perfil">
+    tools:context="start.com.br.startapp.atividade.Principal">
 
 
+    <item android:title="Configurações" android:menuCategory="container" app:showAsAction="always" android:orderInCategory="1" >
+        <item
+
+            android:id="@+id/notificaoes"
+            android:icon="@drawable/ic_notification"
+            android:title="@string/configuracao_notificacao" />
+
+        <item
+            android:id="@+id/integracao_outlook"
+            android:icon="@drawable/ic_outlook"
+            android:title="@string/configuracao_integracao_outlook"
+            />
+
+        <item
+            android:id="@+id/distancia"
+            android:icon="@drawable/ic_distance"
+            android:title="@string/configuracao_localizacao"
+            />
+
+    </item>
 
     <item
+        android:id="@+id/aplicacao_bottom_recentes"
+        android:title="@string/configuracao_disponivel_recentes"
+        android:icon="@drawable/history"
 
-        android:id="@+id/notificaoes"
-        android:checkable="false"
-        android:enabled="false"
-        android:orderInCategory="100"
-        android:title="@string/configuracao_notificacao" />
-
-    <item
-        android:id="@+id/integracao_outlook"
-        android:orderInCategory="100"
-        android:title="@string/configuracao_integracao_outlook"
         />
 
-    <item
-        android:id="@+id/distancia"
-        android:orderInCategory="100"
-        android:title="@string/configuracao_distancia"
-        />
 
     <item
-        android:id="@+id/localizacao"
-        android:checkable="false"
-        android:orderInCategory="100"
-        android:title="@string/configuracao_localizacao_disponivel" />
+        android:id="@+id/aplicacao_bottom_favoritos"
+        android:icon="@drawable/heart"
+        android:title="@string/configuracao_disponivel_favoritos" />
+
 
     <item
-        android:id="@+id/disponivel"
-        android:orderInCategory="100"
-        android:title="@string/configuracao_disponivel"
+        android:id="@+id/aplicacao_bottom_atrasos"
+        android:icon="@drawable/ic_later"
+        android:title="@string/configuracao_disponivel_atrasos"
+
+
+    />
+
+    <item
+        android:id="@+id/sugestion"
+        android:icon="@drawable/ic_sugestion"
+        android:title="@string/configuracao_sugestoes"
+
         />
 
 

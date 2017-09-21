@@ -21,6 +21,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         android:background="@color/primaryTextColor"
+        app:itemIconTint="@color/com_facebook_button_background_color_disabled"
         app:itemTextColor="@color/com_facebook_device_auth_text"
         >
 

@@ -52,7 +52,7 @@ public class Principal extends AppCompatActivity implements ItemFragment.OnListF
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        adaptador = new AdaptadorFolder(getSupportFragmentManager(), new String[]{"Agendamentos feitos", "Agendamentos recebidos"});
+        adaptador = new AdaptadorFolder(getSupportFragmentManager(), new String[]{"Agendamentos"});
 
         // Set up the ViewPager with the sections adapter.
         pageViewer = (ViewPager) findViewById(R.id.tab_aplicacao);
@@ -65,6 +65,7 @@ public class Principal extends AppCompatActivity implements ItemFragment.OnListF
 
         /* Recuperando e configurando o NavigationView */
         DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.navegacao_configuracoes);
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle( this, drawerLayout, toolbar, R.string.configuracao_ativa, R.string.configuracao_intativa);
         drawerLayout.addDrawerListener(toggle);
         drawerLayout.addDrawerListener(new DrawerLayout.DrawerListener() {

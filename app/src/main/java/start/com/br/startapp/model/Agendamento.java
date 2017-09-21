@@ -3,7 +3,7 @@ package start.com.br.startapp.model;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
-
+import start.com.br.startapp.R;
 /**
  * Representa um agendamento realizado pelo usuário
  * Created by Paulo Rogério Oliveira da Silva on 19/09/2017.
@@ -23,10 +23,10 @@ public class Agendamento implements Serializable{
      */
     public static List<Agendamento> agendamentosParaDemonstracao(){
 
-        Agendamento[] demonstracao = new Agendamento[]{ new Agendamento("Programador", "Paulo", 2130837667, new java.util.Date().getTime()),
-                new Agendamento("Urologista", "Joao",2130837644 , new java.util.Date().getTime()),
-                new Agendamento("Dentista", "Julio", 2130837626, new java.util.Date().getTime()),
-                new Agendamento("Arquiteta", "Fernanda", 2130837626, new java.util.Date().getTime())
+        Agendamento[] demonstracao = new Agendamento[]{ new Agendamento("Programador", "Paulo", R.drawable.paulo, new java.util.Date().getTime()),
+                new Agendamento("Urologista", "Joao",R.drawable.joao , new java.util.Date().getTime()),
+                new Agendamento("Dentista", "Julio", R.drawable.julio, new java.util.Date().getTime()),
+                new Agendamento("Arquiteta", "Fernanda", R.drawable.fernanda, new java.util.Date().getTime())
 
 
         };
