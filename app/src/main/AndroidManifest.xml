@@ -15,7 +15,7 @@
         <!-- Atividade Cadastro executada pelo menos uma vez -->
         <activity
             android:name=".atividade.Acesso"
-            android:label="@string/title_home">
+            android:label="">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +26,7 @@
         <!-- Atividade Principal -->
         <activity
             android:name=".atividade.Principal"
-            android:label="@string/title_home">
+            android:label="Bem vindo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

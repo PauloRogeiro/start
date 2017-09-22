@@ -8,12 +8,12 @@
 
     <!-- Tela Principal -->
     <string-array name="periodo_agendamento">
-        <item>HoJe</item>
+        <item>Hoje</item>
         <item>Amanhã</item>
-        <item>Semana que vem</item>
+        <item>Próxima semana</item>
         <item>Específico</item>
     </string-array>
-    <string name="periodo_escolhido"> horários de:</string>
+    <string name="periodo_escolhido"> Período:</string>
 
 
     <!--Tela Acesso -->

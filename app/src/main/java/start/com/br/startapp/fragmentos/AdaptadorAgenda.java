@@ -5,6 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 import start.com.br.startapp.R;
@@ -101,6 +103,8 @@ public class AdaptadorAgenda extends RecyclerView.Adapter<AdaptadorAgenda.UiLinh
         public UiLinha(View view) {
             super(view);
             mView = view;
+            view.setAnimation(new Animation() {
+            });
             this.pessoa_foto = (ImageView) view.findViewById(R.id.agendamento_pessoa_foto);
             this.pessoa_nome = (TextView) view.findViewById(R.id.agendamento_pessoa_nome);
             this.pessoa_data = (TextView) view.findViewById(R.id.agendamento_pessoa_data);

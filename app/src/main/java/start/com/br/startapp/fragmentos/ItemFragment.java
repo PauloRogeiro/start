@@ -1,6 +1,7 @@
 package start.com.br.startapp.fragmentos;
 
 import android.content.Context;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -22,6 +23,32 @@ import java.util.List;
  * interface.
  */
 public class    ItemFragment extends Fragment {
+
+    /**
+     * Objetivo dessa classe é picotar os lados dos itens do listview para mostrar o backGround pai
+     */
+    private class Space extends RecyclerView.ItemDecoration{
+        private int espaco;
+
+
+        public Space(int espaco) {
+            this.espaco = espaco;
+        }
+
+        @Override
+        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+            outRect.left = espaco;
+            outRect.bottom = espaco;
+            outRect.right = espaco;
+
+            //É o primeiro item view então adiciona um espaço em cima também
+            if(  parent.getChildLayoutPosition(view) == 0  ){
+                outRect.top = espaco;
+            }
+
+        }
+    }
+
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
@@ -69,6 +96,7 @@ public class    ItemFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
+            recyclerView.addItemDecoration(new Space(50));
             recyclerView.setAdapter(new AdaptadorAgenda(Agendamento.agendamentosParaDemonstracao(), (OnListFragmentInteractionListener) context));
         }
         return view;

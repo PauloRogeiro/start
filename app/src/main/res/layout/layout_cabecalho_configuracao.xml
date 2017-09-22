@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cabecalho_configuracoes"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="160dp"
     android:background="@drawable/side_nav_bar"
     android:gravity="bottom"
     android:orientation="vertical"
@@ -14,19 +14,23 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:weightSum="1">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/perfil_avatar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
+        android:layout_width="118dp"
+        android:layout_height="80dp"
+        android:padding="2dp"
+        android:layout_marginTop="2dp"
         android:layout_alignParentLeft="true"
-        android:scaleType="fitCenter"
+        android:layout_alignParentTop="true"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/secondaryDarkColor"
         app:srcCompat="@android:drawable/sym_def_app_icon"
 
 
-     />
+
+        />
+
+
 
     <TextView
         android:id="@+id/perfil_nome"
