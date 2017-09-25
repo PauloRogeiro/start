@@ -1,11 +1,9 @@
-package start.com.br.startapp.fragmentos;
+package start.com.br.startapp.adaptadores;
 
-import android.content.res.Resources;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,7 +11,6 @@ import start.com.br.startapp.R;
 import start.com.br.startapp.fragmentos.ItemFragment.OnListFragmentInteractionListener;
 import start.com.br.startapp.model.Agendamento;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 

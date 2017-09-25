@@ -11,9 +11,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.edmodo.rangebar.RangeBar;
+import com.google.zxing.client.result.AddressBookParsedResult;
+
 import start.com.br.startapp.R;
-import start.com.br.startapp.adaptadores.AdaptadorAgenda;
-import start.com.br.startapp.model.Agendamento;
+import start.com.br.startapp.adaptadores.AdaptadorDisponibilidade;
+import start.com.br.startapp.model.Disponibilidade;
+import start.com.br.startapp.model.Horario;
 
 /**
  * A fragment representing a list of Items.
@@ -21,12 +25,12 @@ import start.com.br.startapp.model.Agendamento;
  * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
  * interface.
  */
-public class    ItemFragment extends Fragment {
+public class ItemFragmentDisponibilidade extends Fragment {
 
     /**
      * Objetivo dessa classe é picotar os lados dos itens do listview para mostrar o backGround pai
      */
-    public class Space extends RecyclerView.ItemDecoration{
+    private class Space extends RecyclerView.ItemDecoration{
         private int espaco;
 
 
@@ -51,23 +55,26 @@ public class    ItemFragment extends Fragment {
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
+    private static final String ADAPTADOR_INSTALADO = "adaptador";
     // TODO: Customize parameters
     private int mColumnCount = 1;
+    private AdaptadorDisponibilidade adaptador;
     private OnListFragmentInteractionListener mListener;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public ItemFragment() {
+    public ItemFragmentDisponibilidade() {
     }
 
     // TODO: Customize parameter initialization
     @SuppressWarnings("unused")
-    public static ItemFragment newInstance(int columnCount) {
-        ItemFragment fragment = new ItemFragment();
+    public static ItemFragmentDisponibilidade newInstance(int columnCount, AdaptadorDisponibilidade adptador) {
+        ItemFragmentDisponibilidade fragment = new ItemFragmentDisponibilidade();
         Bundle args = new Bundle();
         args.putInt(ARG_COLUMN_COUNT, columnCount);
+        args.putSerializable(ADAPTADOR_INSTALADO, adptador);
         fragment.setArguments(args);
         return fragment;
     }
@@ -78,25 +85,28 @@ public class    ItemFragment extends Fragment {
 
         if (getArguments() != null) {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
+            adaptador= (AdaptadorDisponibilidade) getArguments().get(ADAPTADOR_INSTALADO);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_item_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_item_list_disponibilidade, container, false);
 
         // Set the adapter
         if (view instanceof RecyclerView) {
-            Context context = view.getContext();
+             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
             if (mColumnCount <= 1) {
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
+
             recyclerView.addItemDecoration(new Space(50));
-            recyclerView.setAdapter(new AdaptadorAgenda(Agendamento.agendamentosParaDemonstracao(), (OnListFragmentInteractionListener) context));
+            recyclerView.setHasFixedSize(true);
+            recyclerView.setAdapter(adaptador);
         }
         return view;
     }
@@ -131,6 +141,6 @@ public class    ItemFragment extends Fragment {
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(Agendamento item);
+        void onListFragmentInteraction(Horario item);
     }
 }

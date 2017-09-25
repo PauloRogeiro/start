@@ -9,6 +9,8 @@ import start.com.br.startapp.R;
  * Created by Paulo Rogério Oliveira da Silva on 19/09/2017.
  */
 
+
+
 public class Agendamento implements Serializable{
 
     private String funcao;

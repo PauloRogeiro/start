@@ -24,9 +24,13 @@ import com.bumptech.glide.Glide;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import start.com.br.startapp.R;
+import start.com.br.startapp.adaptadores.AdaptadorDisponibilidade;
 import start.com.br.startapp.adaptadores.AdaptadorFolder;
 import start.com.br.startapp.fragmentos.ItemFragment;
+import start.com.br.startapp.fragmentos.ItemFragmentDisponibilidade;
 import start.com.br.startapp.model.Agendamento;
+import start.com.br.startapp.model.Disponibilidade;
+import start.com.br.startapp.model.Horario;
 import start.com.br.startapp.model.Usuario;
 
 
@@ -35,11 +39,12 @@ import start.com.br.startapp.model.Usuario;
  * Created by Paulo Rogério Oliveira da Silva on 17/09/2017.
  */
 
-public class Principal extends AppCompatActivity implements ItemFragment.OnListFragmentInteractionListener {
+public class Principal extends AppCompatActivity implements ItemFragment.OnListFragmentInteractionListener, ItemFragmentDisponibilidade.OnListFragmentInteractionListener {
 
 
     private AdaptadorFolder adaptador;
     private ViewPager pageViewer;
+    private Disponibilidade disponibilidade = new Disponibilidade(Disponibilidade.USUARIO_NAO_DEFINIDO, Disponibilidade.DIA_NAO_DEFINIDO);
 
 
 
@@ -54,19 +59,63 @@ public class Principal extends AppCompatActivity implements ItemFragment.OnListF
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
         /* Recuperando e configurando a toobar */
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_app);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_app);
+
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        adaptador = new AdaptadorFolder(getSupportFragmentManager(), new String[]{"Agendamentos"});
+        adaptador = new AdaptadorFolder(getSupportFragmentManager(), new String[]{"Agendamentos", "Disponibilidade", "Encontrar"}, new AdaptadorDisponibilidade(this));
 
         // Set up the ViewPager with the sections adapter.
         pageViewer = (ViewPager) findViewById(R.id.tab_aplicacao);
         pageViewer.setAdapter(adaptador);
 
-
         TabLayout tabLayout = (TabLayout) findViewById(R.id.layoutTab);
         tabLayout.setupWithViewPager(pageViewer);
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                //Tab de disponibilidade
+                if( tab.getPosition() == 1) {
+                    toolbar.inflateMenu(R.menu.menu_aplicacao);
+                    adaptador.getAdaptadorDisponibilidade().setDisponibilidade(disponibilidade.getDisponibilidadeList(Horario.PERIODO_DIA.PERIODO_MANHA));
+                    toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+                        @Override
+                        public boolean onMenuItemClick(MenuItem item) {
+
+                            switch (item.getItemId()){
+                                case R.id.periodo_manha:
+                                    adaptador.getAdaptadorDisponibilidade().setDisponibilidade(disponibilidade.getDisponibilidadeList(Horario.PERIODO_DIA.PERIODO_MANHA));
+                                    return true;
+                                case R.id.periodo_tarde:
+                                    adaptador.getAdaptadorDisponibilidade().setDisponibilidade(disponibilidade.getDisponibilidadeList(Horario.PERIODO_DIA.PERIODO_TARDE));
+                                    return true;
+                                case R.id.periodo_noite:
+                                    adaptador.getAdaptadorDisponibilidade().setDisponibilidade(disponibilidade.getDisponibilidadeList(Horario.PERIODO_DIA.PERIODO_NOITE));
+                                    return true;
+                                case R.id.periodo_madrugada:
+                                    adaptador.getAdaptadorDisponibilidade().setDisponibilidade(disponibilidade.getDisponibilidadeList(Horario.PERIODO_DIA.PERIODO_MADRUGADA));
+                                    return true;
+                            }
+
+                            return false;
+                        }
+                    });
+                } else{
+                    toolbar.getMenu().clear();
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
         /* Recuperando e configurando o NavigationView */
         DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.navegacao_configuracoes);
@@ -122,4 +171,12 @@ public class Principal extends AppCompatActivity implements ItemFragment.OnListF
     public void onListFragmentInteraction(Agendamento item) {
 
     }
+
+    @Override
+    public void onListFragmentInteraction(Horario item) {
+
+
+    }
+
+
 }
