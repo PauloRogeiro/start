@@ -13,8 +13,10 @@
         <item>Próxima semana</item>
         <item>Específico</item>
     </string-array>
-    <string name="periodo_escolhido"> Período:</string>
-
+    <string name="periodo_dia_manha">manhã</string>
+    <string name="periodo_dia_tarde">tarde</string>
+    <string name="periodo_dia_noite">noite</string>
+    <string name="periodo_dia_madrugada">madrugada</string>
 
     <!--Tela Acesso -->
 
@@ -22,10 +24,8 @@
     <string name="acesso_sub_titulo">Escolha uma forma de acessar o aplicativo</string>
 
 
-
-
     <!--Tela Configuração -->
-    <string name="configuracao_integracao_outlook">Integração outlook</string>
+    <string name="configuracao_integracao_outlook">Outlook</string>
     <string name="configuracao_notificacao">Notificações</string>
     <string name="configuracao_localizacao">Localização</string>
     <string name="configuracao_disponivel">Disponível</string>

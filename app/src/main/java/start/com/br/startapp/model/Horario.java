@@ -167,13 +167,13 @@ public class Horario implements Serializable {
 
 
     public String representacaoHoraInicial(){
-        return minutoInicial == MINUTO_FINAL_HORA? (this.hora.ordinal()+1) + ":"+ String.format(Integer.valueOf(MINUTO_INICIAL_HORA).toString(),"00"):this.hora.ordinal() + ":"+
-                String.format(Integer.valueOf(minutoInicial).toString(),"00");
+        return minutoInicial == MINUTO_FINAL_HORA? (this.hora.ordinal()+1) + ":"+ String.format("%02d",MINUTO_INICIAL_HORA):this.hora.ordinal() + ":"+
+                String.format("%02d",minutoInicial);
     }
     public String representacaoHoraFinal(){
         /* Se for o último minuto da hora então será exibido a próxima hora, ninguém diz 1:60 dizem 2:00*/
-        return  minutoFinal == MINUTO_FINAL_HORA? (this.hora.ordinal()+1) + ":"+ String.format(Integer.valueOf(MINUTO_INICIAL_HORA).toString(),"00"):this.hora.ordinal() + ":"+
-                String.format(Integer.valueOf(minutoFinal).toString(),"00");
+        return  minutoFinal == MINUTO_FINAL_HORA? (this.hora.ordinal()+1) + ":"+ String.format("%02d",MINUTO_INICIAL_HORA):this.hora.ordinal() + ":"+
+                String.format("%02d",minutoFinal);
     }
 
     /**

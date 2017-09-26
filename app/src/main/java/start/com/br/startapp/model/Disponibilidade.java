@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.SimpleFormatter;
@@ -103,14 +104,8 @@ public class Disponibilidade implements Serializable {
      * @return as disponibilidades com base em um  período do dia
      */
     public List<Horario> getDisponibilidadeList(Horario.PERIODO_DIA periodo) {
-        List<Horario> sub;
-        int inicio = periodo.getInicio().ordinal()-1;
 
-        sub = disponibilidadeList.subList(Math.max(periodo.getInicio().ordinal()-1,0), periodo.getFim().ordinal()+1 );
-        if (inicio == -1) {
-          sub.remove(0);sub.add(0, disponibilidadeList.get(0));
-        }
-        return sub;
+       return disponibilidadeList.subList(periodo.getInicio().ordinal(), periodo.getFim().ordinal()+1 );
     }
 
 

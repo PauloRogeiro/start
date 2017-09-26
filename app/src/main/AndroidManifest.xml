@@ -12,6 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+
+        <!-- Atividade Cadastro executada pelo menos uma vez -->
+        <activity
+            android:name=".atividade.Teste"
+            android:label="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
         <!-- Atividade Cadastro executada pelo menos uma vez -->
         <activity
             android:name=".atividade.Acesso"
@@ -26,7 +39,7 @@
         <!-- Atividade Principal -->
         <activity
             android:name=".atividade.Principal"
-            android:label="Bem vindo">
+            android:label="">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -60,7 +73,8 @@
         <activity
             android:name=".atividade.MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+
     </application>
 
 </manifest>

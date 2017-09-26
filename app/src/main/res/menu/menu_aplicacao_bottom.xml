@@ -2,7 +2,33 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item
+        android:id="@+id/periodo_manha"
+        android:icon="@drawable/ic_manha"
+        android:title="manhã"
+        app:showAsAction="always"
 
+        />
+
+    <item
+        android:id="@+id/periodo_tarde"
+        android:icon="@drawable/ic_tarde"
+        android:title="tarde"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/periodo_noite"
+        android:icon="@drawable/ic_noite"
+        android:title="noite"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/periodo_madrugada"
+        android:icon="@drawable/ic_madrugada"
+        android:title="madrugada"
+        app:showAsAction="always"
+        />
 
 
 </menu>
