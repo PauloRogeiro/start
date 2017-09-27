@@ -3,6 +3,7 @@ package start.com.br.startapp.atividade;
 import android.app.Activity;
 import android.graphics.Rect;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -13,6 +14,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.transition.Fade;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -60,6 +62,12 @@ public class Principal extends AppCompatActivity implements ItemFragment.OnListF
 
         /* Recuperando e configurando a toobar */
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_app);
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setEnterTransition(new Fade());
+        }
+
 
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three

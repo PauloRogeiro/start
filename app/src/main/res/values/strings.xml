@@ -22,7 +22,8 @@
 
     <string name="acesso_titulo">Primeiro acesso</string>
     <string name="acesso_sub_titulo">Escolha uma forma de acessar o aplicativo</string>
-
+    <string name="acesso_facebook_login_cancel">Login do facebook cancelado escolha uma forma de entrar</string>
+    <string name="acesso_facebook_login_fail">Erro no seu login do facebook, mas você pode se cadastrar</string>
 
     <!--Tela Configuração -->
     <string name="configuracao_integracao_outlook">Outlook</string>

@@ -14,15 +14,21 @@
       android:layout_centerHorizontal="true"
      >
 
-      <android.support.v7.widget.AppCompatImageView
+      <de.hdodenhof.circleimageview.CircleImageView
           android:id="@+id/appCompatImageView"
-          android:layout_width="200dp"
-          android:layout_height="200dp"
-          android:background="@color/cardview_light_background"
-          android:scaleType="fitCenter"
-          android:src="@drawable/logo"
+          android:layout_width="118dp"
+          android:layout_height="160dp"
+          android:padding="2dp"
+          android:layout_marginTop="2dp"
           android:layout_centerInParent="true"
-          android:layout_alignParentTop="true"/>
+          android:layout_alignParentTop="true"
+          android:scaleType="centerCrop"
+          app:civ_border_width="1dp"
+          app:civ_border_color="@color/primaryTextColor"
+          android:src="@drawable/new_user"
+
+          />
+
 
 
       <Button
@@ -31,6 +37,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_below="@+id/appCompatImageView"
+          android:layout_marginTop="2dp"
           android:text="Acesso com Facebook"
           android:drawableLeft="@drawable/facebook"
           android:layout_centerHorizontal="true" />
